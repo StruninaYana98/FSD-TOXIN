@@ -1,0 +1,16 @@
+style
+  include color-blocks.scss
+mixin color-blocks(ColorName, text1, text2)
+  div.color-blocks
+    div(class=['color-blocks__square', 'color-blocks__square_' + ColorName])
+    div.color-blocks__text
+      h2.color-blocks__name=text1
+      p.color-blocks__number=text2
+
++color-blocks('DS100', 'Dark Shade 100%', '#1F2041')
++color-blocks('DS75', 'Dark Shade 75%', '#1F2041')
++color-blocks('DS50', 'Dark Shade 50%', '#1F2041')
++color-blocks('DS25', 'Dark Shade 25%', '#1F2041')
++color-blocks('DS5', 'Dark Shade 5%', '#1F2041')
++color-blocks('Purple', 'Purple', '#BC9CFF')
++color-blocks('Green', 'Green', '#6FCF97')
