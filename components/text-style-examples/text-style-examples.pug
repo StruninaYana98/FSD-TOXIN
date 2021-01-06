@@ -1,0 +1,12 @@
+style
+  include text-style-examples.scss
+mixin text-style-examples( LeftText, RightText)
+  div.text-style-examples
+    div.text-style-examples__left-container
+      h1(class=['text-style-examples__left-text-' + LeftText])=LeftText
+    div.text-style-examples__right-container
+      p(class=['text-style-examples__right-text-' + LeftText])=RightText
++text-style-examples('H1', 'This one is the sub-section or widget title')
++text-style-examples('H2', 'Next one is the item title inside widgets')
++text-style-examples('H3', 'This is a label or cta text')
++text-style-examples('Body', 'This is the body text which is used for most of the design, like paragraphs, lists, etc.')
