@@ -1,0 +1,161 @@
+@import '../../fonts/fonts-templates.scss';
+.button{
+    @extend %text-H3;
+    cursor: pointer;
+    outline: none;
+    
+}
+
+
+.button_bright-fill {
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    color: white;
+    border: none;
+    min-width: 99px;
+    height: fit-content;
+    border-radius: 22px;
+    padding-left: 17px;
+    padding-right: 17px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+@media screen and (max-width:1440px){
+    .button_bright-fill {
+        min-width:calc( 99px*0.8 + (99 - 99*0.8) * (100vw - 320px) / (1440 - 320) );
+        min-height:calc( 44px*0.8 + (44 - 44*0.8) * (100vw - 320px) / (1440 - 320) );
+        border-radius: calc( 22px*0.8 + (22 - 22*0.8) * (100vw - 320px) / (1440 - 320) );
+        padding-left: calc( 17px*0.8 + (17 - 17*0.8) * (100vw - 320px) / (1440 - 320) );
+        padding-right: calc( 17px*0.8 + (17 - 17*0.8) * (100vw - 320px) / (1440 - 320) );
+        padding-top:calc( 15px*0.8 + (15 - 15*0.8) * (100vw - 320px) / (1440 - 320) );
+        padding-bottom: calc( 15px*0.8 + (15 - 15*0.8) * (100vw - 320px) / (1440 - 320) );
+    }
+   
+}
+.button_small-bright-fill{
+    @extend .button_bright-fill;
+    min-width: 87px;
+    padding-left: 20px;
+    padding-right: 20px;
+    height:fit-content;
+    border-radius: 17px;
+    padding-top:10px;
+    padding-bottom:10px;
+
+}
+@media screen and (max-width:1440px){
+    .button_small-bright-fill{
+        min-width:calc( 87px*0.8 + (87 - 87*0.8) * (100vw - 320px) / (1440 - 320) );
+        min-height:calc( 34px*0.8 + (34 - 34*0.8) * (100vw - 320px) / (1440 - 320) );
+        border-radius: calc( 17px*0.8 + (17 - 17*0.8) * (100vw - 320px) / (1440 - 320) );
+        padding-left: calc( 20px*0.8 + (20 - 20*0.8) * (100vw - 320px) / (1440 - 320) );
+        padding-right: calc( 20px*0.8 + (20 - 20*0.8) * (100vw - 320px) / (1440 - 320) );
+    }
+
+}
+.button_faint-fill {
+    @extend .button_bright-fill;
+    opacity: 0.5;
+ 
+}
+.button_bright-border, .button_faint-border{
+    position: relative;
+    border-radius: 20px;
+    min-width:95px;
+    height: fit-content;
+    background: white;
+    color: #BC9CFF;
+    border:none;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 13px;
+    padding-bottom: 13px;
+}
+.button_small-bright-border{
+    @extend .button_bright-border;
+    border-radius: 15px;
+    min-width:81px;
+    height: fit-content;
+    padding-left: 18px;
+    padding-right: 18px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+@media screen and (max-width:1440px){
+    .button_bright-border, .button_faint-border{
+        min-width:calc( 95px*0.8 + (95 - 95*0.8) * (100vw - 320px) / (1440 - 320) );
+        border-radius:calc( 20px*0.8 + (20 - 20*0.8) * (100vw - 320px) / (1440 - 320) );
+        padding-left: calc( 15px*0.8 + (15 - 15*0.8) * (100vw - 320px) / (1440 - 320) );
+        padding-right: calc( 15px*0.8 + (15 - 15*0.8) * (100vw - 320px) / (1440 - 320) );
+        padding-top:calc( 13px*0.8 + (13 - 13*0.8) * (100vw - 320px) / (1440 - 320) );
+        padding-bottom: calc( 13px*0.8 + (13 - 13*0.8) * (100vw - 320px) / (1440 - 320) );
+    
+    }
+    .button_small-bright-border{
+        min-width:calc( 81px*0.8 + (81 - 81*0.8) * (100vw - 320px) / (1440 - 320) );
+       
+        border-radius:calc( 15px*0.8 + (15 - 15*0.8) * (100vw - 320px) / (1440 - 320) );
+    }
+    .button_bright-border::before, 
+    .button_faint-border::before{
+        border-radius:calc( 22px*0.8 + (22 - 22*0.8) * (100vw - 320px) / (1440 - 320) );
+    }
+}
+.button_bright-border::before, 
+.button_faint-border::before {
+    position: absolute;
+    top: -2px;
+    bottom: -2px;
+    left: -2px;
+    right: -2px;
+    content: "";
+    background:linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    z-index: -1;
+    border-radius: 22px;
+    
+}
+.button_faint-border::before {
+    opacity: 0.5;
+   
+}
+.button_bright{
+    color:#BC9CFF;
+    border:none;
+    background-color: white;
+}
+.button_gray{
+    color:rgba(31, 32, 65, 0.5);
+    border:none;
+    background-color: white;
+}
+.button_long{
+    position: relative;
+    min-width: 320px;
+    min-height: 44px;
+    border-radius: 22px;
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    color:white;
+    border:none;
+    padding-right:40px;
+    padding-left:40px;
+   
+}
+@media screen and (max-width:1440px){
+    .button_long{
+        min-width:calc( 320px*0.8 + (320 - 320*0.8) * (100vw - 320px) / (1440 - 320) );
+        min-height:calc( 44px*0.8 + (44 - 44*0.8) * (100vw - 320px) / (1440 - 320) );
+        border-radius:calc( 22px*0.8 + (22 - 22*0.8) * (100vw - 320px) / (1440 - 320) );
+        padding-left: calc( 40px*0.8 + (40 - 40*0.8) * (100vw - 320px) / (1440 - 320) );
+        padding-right: calc( 40px*0.8 + (40 - 40*0.8) * (100vw - 320px) / (1440 - 320) );
+    }
+}
+.button_long::after{
+    position: absolute;
+    content:'';
+    background: url(arrow-forward.svg) no-repeat ;
+    background-position: right 13px top 50%;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+   
+}
