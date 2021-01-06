@@ -1,0 +1,44 @@
+.rate-buttons {
+    width: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+}
+.rate-buttons__star {
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    margin-right: 4px;
+    position: relative;
+}
+@media screen and (max-width:1440px){
+    .rate-buttons__star {
+        width:calc( 20px * 0.8 + (20 - 20*0.8) * (100vw - 320px) / (1440 - 320) );
+        height: calc( 20px * 0.8 + (20 - 20*0.8) * (100vw - 320px) / (1440 - 320) );
+        margin-right: calc( 4px * 0.8 + (4 - 4*0.8) * (100vw - 320px) / (1440 - 320) );
+    }
+}
+.rate-buttons__star:before {
+    position: absolute;
+    top:0;
+    left:0;
+    right: 0;
+    bottom: 0;
+    content: '';
+    background: url(star-off.svg) no-repeat center;
+    background-size: cover;
+}
+.rate-buttons__star_active:before, .rate-buttons__star_active ~ .rate-buttons__star:before {
+    background: url(star-on.svg) no-repeat center;
+    background-size: cover;
+}
+.rate-buttons:hover .rate-buttons__star:before {
+    background: url(star-off.svg) no-repeat center;
+    background-size: cover;
+}
+.rate-buttons__star:hover ~ .rate-buttons__star:before,
+.rate-buttons:hover .rate-buttons__star:hover:before{
+    
+    background: url(star-on.svg) no-repeat center;
+    background-size: cover;
+}

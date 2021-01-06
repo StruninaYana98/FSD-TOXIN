@@ -1,0 +1,8 @@
+mixin rate-buttons( rate)
+  .rate-buttons
+    - for (var i = 5; i > 0; --i) {
+      if i===rate
+        .rate-buttons__star.rate-buttons__star_active
+      else
+        .rate-buttons__star
+    -}
