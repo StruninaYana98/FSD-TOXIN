@@ -1,0 +1,48 @@
+@import '../../fonts/fonts-templates.scss';
+.radio-buttons{
+  display:flex;
+}
+.radio-buttons__legend{
+    @extend %text-H3;
+    margin-bottom:9px;
+    margin-left:4px;
+    margin:0;
+    padding:0;
+    margin-bottom: 17px;
+    
+}
+.radio-buttons__label{
+  cursor: pointer;
+  position: relative;
+  
+  @extend %text-Body;
+  line-height: 18px;
+  display:flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  margin-bottom: 10px;
+  margin-right: 22px;
+}
+.radio-buttons__input {
+    position: absolute;
+   z-index: -1;
+    opacity: 0;
+  
+  
+}
+.radio-buttons__check{
+  box-sizing:border-box;
+  margin-right: 9px;
+  display: inline-block;
+  content: "";
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  
+}
+.radio-buttons__input:checked + .radio-buttons__check {
+    border: 1px solid #BC9CFF;
+    background: url(radio-checked.svg) no-repeat center;
+}
+
