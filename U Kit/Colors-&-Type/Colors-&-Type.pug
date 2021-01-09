@@ -1,0 +1,18 @@
+doctype html
+html
+  head
+    meta(charset=utf-8)
+    meta(name="viewport" content="width=device-width")
+  body
+    div.body__container
+      div.logo__container
+        include ../../components/logo/logo.pug
+        -var colorlogo=false
+        +logo
+      div.body__content-container
+        
+        div.color-blocks__container
+          include ../../components/color-blocks/color-blocks.pug
+        
+        div.text-style-example__container
+          include ../../components/text-style-examples/text-style-examples.pug
