@@ -1,0 +1,31 @@
+@import '../../fonts/fonts-templates.scss';
+.comments{
+    max-width: 780px;
+    @extend %text-Body;
+}
+.comments__image{
+    float:left;
+    width:40;
+    height: 40;
+}
+.comments__name{
+    margin:0;
+    margin-left: 60px;
+    font-weight: bold;
+}
+.comments__time{
+    margin:0;
+    margin-left: 60px;
+}
+.comments__comment{
+display:flex;
+margin-top:10px;
+margin-left: 5px;
+}
+.comments__likes{
+    padding-top: 3px;
+}
+.comments__text{
+    margin-left: 15px;
+    max-width: 653px;
+}

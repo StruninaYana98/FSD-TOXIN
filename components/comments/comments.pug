@@ -1,0 +1,13 @@
+mixin comments(image,name,time,value,checked,text)
+  .comments
+    .comments__person
+      img.comments__image(src="../components/comments/"+image + ".png")
+      p.comments__name=name
+      p.comments__time=time
+    .comments__comment
+      .comments__likes
+        include ../like-buttons/like-buttons.pug
+        +like-buttons(value,checked)
+      .comments__text=text
+    
+  
