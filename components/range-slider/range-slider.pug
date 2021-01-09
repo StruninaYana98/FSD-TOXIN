@@ -1,0 +1,12 @@
+mixin range-slider(head)
+  div.range-slider
+    .range-slider__container
+      h3.range-slider__header=head
+      .range-slider__price
+        input.range-slider__min( type="text" value="5000" disabled) 
+        .range-slider__min-buffer
+        p.range-slider__min-rub ₽ - 
+        input.range-slider__max(type="text" value="10000" disabled)
+        .range-slider__max-buffer
+        p.range-slider__max-rub ₽
+    div.range-slider_slider         
