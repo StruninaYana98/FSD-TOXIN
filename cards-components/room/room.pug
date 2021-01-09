@@ -1,0 +1,30 @@
+mixin room(number,lux,scroll,price,rating,reviews)
+  .room
+    .room__carousel
+      ul.room__list
+        - for (var n = 1; n <= 4; n++)
+          li.room__item(value=n)
+            img.room__image(src="../cards-components/room/room__"+ number + "("+ n + ")" + ".jpg" alt="room image")
+      if scroll
+        .room-control
+          .room__control-prev
+          .room__control-next
+      ul.room__pagination
+    .room__information
+      .room__number-and-price
+        .room__room-number
+          span.room__number-sign №
+          span.room__number=number
+          if lux
+            span.room__lux люкс
+        .room__room-price
+          span.room__price-per-day=price
+          span.room__rub ₽
+          span.room__day в сутки
+      .room__rating-and-reviews
+        .room__rating
+          include ../../components/rate-buttons/rate-buttons.pug
+          +rate-buttons(rating)
+        .room__reviews
+          span.room__reviews-number=reviews
+          span.room__reviews-string Отзывов

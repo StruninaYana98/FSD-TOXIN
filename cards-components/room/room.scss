@@ -1,0 +1,146 @@
+@import '../../fonts/fonts-templates.scss';
+.room{
+    background: #FFFFFF;
+    box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+    border-radius: 5px;
+    max-width: 270px;
+    padding-bottom: 19px;
+}
+.room__carousel {
+    position: relative;
+    overflow: hidden;
+    max-width: inherit;
+    height: 151px;
+    display: block;
+  
+}
+.room__list {
+    width: 10000em;
+    position: relative;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  
+}
+.room__item {
+    float: left;
+    width: 270px;
+    height: 151px;
+    background-color: rgba(31, 32, 65, 0.1);
+}
+
+.room-control{
+    display:flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 2;
+}
+.room__control-prev{
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    width: 42px;
+    background: url(room__prev.svg) no-repeat center;
+    cursor:pointer;
+}
+  .room__control-next{
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    width: 42px;
+    background: url(room__next.svg) no-repeat center;
+    cursor:pointer;
+  }
+  .room__pagination{
+    position: absolute;
+    z-index: 2;
+    bottom: 11px;
+    right: 15px;
+  }
+  .room__page{
+    box-sizing:border-box;
+   
+   display: inline-block;
+  
+   width: 7.5px;
+   height: 7.49px;
+   border: 1px solid #FFFFFF;
+   border-radius: 50%;
+   margin-left: 4px;
+   filter: drop-shadow(0px 5px 5px rgba(31, 32, 65, 0.3));
+  }
+  .room__page_active{
+      background-color: white;
+  }
+  .room__information{
+    padding-left: 20px;
+    padding-right: 17px;
+  }
+  .room__number-and-price{
+      display:flex;
+      justify-content: space-between;
+      margin-top:20px;
+      margin-bottom: 8px;
+  }
+  .room__number-sign{
+    @extend %text-H2;
+    font-size:15px;
+  
+}
+.room__number{
+    @extend %text-H2;
+    margin-left:3px;
+    margin-right: 4px;
+  
+}
+.room__lux{
+    @extend %text-H3;
+    color: #BC9CFF;
+}
+.room__room-price{
+    display:flex;
+    align-items: center;
+}
+
+.room__price-per-day,
+.room__rub{
+    @extend %text-H3;
+    color: rgba(31, 32, 65, 0.5);
+    font-size:14px;
+    line-height: 14px;
+ 
+   
+}
+.room__rub{
+    margin-right: 5px
+}
+.room__day{
+    @extend %text-Body;
+    color: rgba(31, 32, 65, 0.5);
+    font-size: 12px;
+    line-height: 15px;
+}
+.room__rating-and-reviews{
+    display:flex;
+    justify-content: space-between;
+    align-items:center ;
+    box-sizing: border-box;
+    padding-top: 7px;
+    border-top: 1px solid rgba(31, 32, 65, 0.1); 
+}
+.room__rating{
+    margin-left:2px;
+}
+.room__reviews{
+    @extend %text-Body;
+    color: rgba(31, 32, 65, 0.5);
+}
+.room__reviews-number{
+    font-weight: bold;
+}
+.room__reviews-string{
+    margin-left: 3px;
+    margin-right: 4px;
+}
