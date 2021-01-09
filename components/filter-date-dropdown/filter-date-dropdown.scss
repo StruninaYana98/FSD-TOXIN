@@ -1,0 +1,64 @@
+@import '../../fonts/fonts-templates.scss';
+
+.filter-date-dropdown__head{
+    @extend %text-H3;
+    margin:0;
+    margin-bottom:6px;
+}
+
+.filter-date-dropdown__filter{
+    width: 266px;
+    height: 44px;
+    background: #FFFFFF;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    box-sizing: border-box;
+    border-radius: 4px;
+    display: flex;
+    margin-bottom:4px;
+}
+@media screen and (max-width:1440px){
+    .filter-date-dropdown__filter{
+        width: calc( 266px * 0.8 + (266 - 266 * 0.8) * (100vw - 320px) / (1440 - 320) );
+        height: calc( 44px * 0.8 + (44 - 44 * 0.8) * (100vw - 320px) / (1440 - 320) );
+        
+    }
+}
+.filter-date-dropdown__filter:hover,
+.filter-date-dropdown__filter:focus{
+    border: 1px solid rgba(31, 32, 65, 0.5);
+}
+.filter-date-dropdown__input{
+    box-sizing: border-box;
+    width: 222px;
+    height: inherit;
+    border:none;
+    background: none;
+    outline: none;
+    text-transform: lowercase;
+    @extend %text-Body;
+    color: rgba(31, 32, 65, 0.75);
+    padding-left: 15px;
+}
+@media screen and (max-width:1440px){
+    .filter-date-dropdown__input{
+       
+        width:calc( 222px * 0.8 + (222 - 222 * 0.8) * (100vw - 320px) / (1440 - 320) );
+        padding-left: calc( 15px * 0.8 + (15 - 15 * 0.8) * (100vw - 320px) / (1440 - 320) );
+    }
+}
+.filter-date-dropdown__button{
+    width: 44px;
+    height: inherit;
+    background: url(filter-date-dropdown__expand-more.svg) no-repeat center;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.filter-date-dropdown__calendar{
+    position: absolute;
+    z-index: 2;
+}
+.filter-date-dropdown__calendar_hidden{
+  height: 0;
+  overflow: hidden;
+}

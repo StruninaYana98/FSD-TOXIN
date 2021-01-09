@@ -1,0 +1,8 @@
+mixin filter-date-dropdown(head)
+  .filter-date-dropdown
+    h3.filter-date-dropdown__head=head
+    .filter-date-dropdown__filter
+      input.filter-date-dropdown__input(type="text" disabled)
+      button.filter-date-dropdown__button
+    .filter-date-dropdown__calendar.filter-date-dropdown__calendar_hidden
+      include ../calendar/calendar.pug
