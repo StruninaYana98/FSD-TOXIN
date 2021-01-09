@@ -1,0 +1,113 @@
+@import '../../fonts/fonts-templates.scss';
+.date-dropdown{
+    max-width: 320px;
+}
+@media screen and (max-width:1440px){
+    .date-dropdown{
+        max-width:calc( 320px * 0.8 + (320 - 320 * 0.8) * (100vw - 320px) / (1440 - 320) );
+    }
+}
+.date-dropdown__inputs{
+    display:flex;
+    justify-content: space-between;
+    margin-bottom:4px;
+}
+.date-dropdown__head{
+    @extend %text-H3;
+    margin:0;
+    margin-bottom:5px;
+}
+.date-dropdown__arrival,
+.date-dropdown__departure{
+    display:flex;
+    width: 150px;
+    height: 44px;
+    background: #FFFFFF;
+    box-sizing: border-box;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+@media screen and (max-width:1440px){
+    .date-dropdown__arrival,
+    .date-dropdown__departure{
+    width: calc( 150px * 0.8 + (150 - 150 * 0.8) * (100vw - 320px) / (1440 - 320) );
+    height: calc( 44px * 0.8 + (44 - 44 * 0.8) * (100vw - 320px) / (1440 - 320) );
+    }
+}
+.date-dropdown__range-from,
+.date-dropdown__range-to{
+    @extend %text-Body;
+    color: rgba(31, 32, 65, 0.75);
+    display: inline-block;
+    box-sizing: border-box;
+    width: 106px;
+    height: inherit;
+    background: none;
+    border:none;
+    outline: none;
+    padding-left: 14px;
+    -webkit-appearance: none;
+}
+
+@media screen and (max-width:1440px){
+    .date-dropdown__range-from,
+    .date-dropdown__range-to{
+        width: calc( 106px * 0.8 + (106 - 106 * 0.8) * (100vw - 320px) / (1440 - 320) );
+        padding-left:  calc( 14px * 0.6 + (14 - 14 * 0.6) * (100vw - 320px) / (1440 - 320) );
+    }
+}
+.date-dropdown__arrival:hover,
+.date-dropdown__departure:hover,
+.date-dropdown__arrival:focus,
+.date-dropdown__departure:focus{
+    border: 1px solid rgba(31, 32, 65, 0.5);
+}
+.date-dropdown__arrow{
+    display: inline-block;
+    width: 42px;
+    height: inherit;
+    background: url(date-dropdown__expand-more.svg) no-repeat center;
+    border:none;
+    outline: none;
+    cursor: pointer;
+}
+@media screen and (max-width:1440px){
+    .date-dropdown__arrow{
+        width: calc( 44px * 0.8 + (44 - 44 * 0.8) * (100vw - 320px) / (1440 - 320) );
+    }
+    
+}
+.date-dropdown__calendar{
+    width: fit-content;
+    position: absolute;
+    z-index: 2;
+}
+.date-dropdown__calendar_hidden{
+  height: 0;
+  overflow: hidden;
+  border:none;
+  
+}
+.room__number-sign{
+    @extend %text-H2;
+    font-size:15px;
+}
+.room__number{
+    @extend %text-H2;
+}
+.room__lux{
+    @extend %text-H3;
+    color: #BC9CFF;
+}
+.room__price-per-day,
+.room__rub{
+    @extend %text-H3;
+    color: rgba(31, 32, 65, 0.5);
+    font-size:14px;
+}
+.room__day{
+    @extend %text-Body;
+    color: rgba(31, 32, 65, 0.5);
+    font-size: 12px;
+}

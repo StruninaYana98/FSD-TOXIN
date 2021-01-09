@@ -1,0 +1,15 @@
+mixin date-dropdown(arrivalHead,arrivalDate,departureHead,departureDate)
+  .date-dropdown
+    .date-dropdown__inputs
+      .date-dropdown__arrival-container
+        h3.date-dropdown__head=arrivalHead
+        .date-dropdown__arrival
+            input.date-dropdown__range-from(type="text" placeholder="ДД.ММ.ГГГГ" data-date-format="DD.MM.YYYY" value=arrivalDate )
+            button.date-dropdown__arrow
+      .date-dropdown__departure-container
+        h3.date-dropdown__head=departureHead
+        .date-dropdown__departure
+            input.date-dropdown__range-to(type="text" placeholder="ДД.ММ.ГГГГ" data-date-format="DD.MM.YYYY" value=departureDate)
+            button.date-dropdown__arrow
+    .date-dropdown__calendar.date-dropdown__calendar_hidden
+      include ../calendar/calendar.pug
