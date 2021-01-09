@@ -1,0 +1,31 @@
+doctype html
+html
+  head
+    meta(charset=utf-8)
+    meta(name="viewport" content="width=device-width")
+  body.cards__body
+    .cards__logo
+      include ../../components/logo/logo.pug
+      -var colorlogo=false
+      +logo
+    .cards__components-container
+      .cards__first-column
+        include ../../cards-components/room-search/room-search.pug   
+        +room-search
+        .cards__registration-container
+          include ../../cards-components/registration/registration.pug
+          +registration
+      .cards__second-column       
+        include ../../cards-components/room-card/room-card.pug
+        +room-card("888",true,"9990","2179","0","300")
+        .cards__enter-container
+          include ../../cards-components/enter/enter.pug
+          +enter
+      .cards__third-column 
+        .cards__calendar
+          include ../../components/calendar/calendar.pug
+        .cards__room-container
+          include ../../cards-components/room/room.pug
+          +room(888,true,true,"9990",5,"145")
+        .cards__room-container
+          +room("840",false,false,"9990",4,"65")
