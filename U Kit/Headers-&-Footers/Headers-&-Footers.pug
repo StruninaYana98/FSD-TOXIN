@@ -1,0 +1,21 @@
+doctype html
+html
+  head
+    meta(charset=utf-8)
+    meta(name="viewport" content="width=device-width")
+    style
+body.headers-footers__body
+  .headers-footers__logo
+    include ../../components/logo/logo.pug
+    -var colorlogo=false
+    +logo
+  include ../../components/header/header.pug
+  -var autorization = false
+  .headers-footers__header.headers-footers__first
+    +header
+  -var autorization = true
+  .headers-footers__header
+    +header
+  include ../../components/footer/footer.pug
+  .headers-footers__cutaway
+    include ../../components/cutaway/cutaway.pug
