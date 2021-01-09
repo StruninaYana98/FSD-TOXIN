@@ -1,0 +1,29 @@
+mixin registration
+  .registration
+    h1.registration__head Регистрация аккаунта
+    include ../../components/mixins/text-field/text-field.pug
+    - var heading = false
+    .registration__text-field
+      +text-field('text','','','Имя')
+    .registration__text-field
+      +text-field('text','','','Фамилия')
+    include ../../components/radio-buttons/radio-buttons.pug
+    .registration__radio-buttons
+      +radio-buttons
+    - var heading = true
+    - var masked = true
+    +text-field('text','дата рождения','','ДД.ММ.ГГГГ')
+    h3.registration__head-h3 Данные для входа в сервис
+    - var heading = false
+    - var masked = false
+    .registration__text-field
+      +text-field('email','','','Email')
+    +text-field('password','','','Пароль')
+    .registration__toggle
+      include ../../components/toggle/toggle.pug
+      +toggle(false, 'Получать спецпредложения','1')
+    .registration__payment
+      button.button.button_long перейти к оплате
+    .registration__enter
+      p.registration__string Уже есть аккаунт на Toxin
+      button.button.button_bright-border Войти
