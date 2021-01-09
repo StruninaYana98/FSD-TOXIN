@@ -1,0 +1,52 @@
+mixin room-card(number,lux,price,discount,servicecharge,additionalservice)
+  .room-card
+    .room-card__head
+      .room-card__room
+        span.room-card__number-sign №
+        span.room-card__number=number
+        if lux
+          span.room-card__lux люкс
+      .room-card__price-per-day
+        span.room-card__price=price
+        span.room-card__rub-head ₽
+        span.room-card__day в сутки
+    include ../../components/date-dropdown/date-dropdown.pug
+    +date-dropdown('прибытие','19.08.2019','выезд','23.08.2019')
+    .room-card__guests-dropdown
+      include ../../components/dropdown/guests-dropdown/guests-dropdown.pug
+      +guests-dropdown('гости',false,'',2,1,0)
+    .room-card__string
+      .room-card__calculations
+        span.room-card__day-price=price
+        span.room-card__rub ₽
+        span.room-card__multiplication х
+        span.room-card__amount-of-days
+        span.room-card__days суток
+      .room-card__total-price
+        span.room-card__total
+        span.room-card__rub ₽
+    .room-card__string
+      .room-card__string-container
+        .room-card__container
+          .room-card__left-part
+            span.room-card__line Сбор за услуги: скидка
+            span.room-card__discount=discount
+            span.room-card__rub ₽
+          .room-card__information i
+      .room-card__string-container
+        span.room-card__service-charge=servicecharge
+        span.room-card__rub ₽
+    .room-card__string
+      .room-card__string-container
+        .room-card__container
+          span.room-card__line Сбор за дополнительные услуги
+          .room-card__information i
+      .room-card__string-container
+        span.room-card__additional-service=additionalservice
+        span.room-card__rub ₽
+    .room-card__final-price
+      span.room-card__string-total Итого
+      .room-card__dashed-line
+      span.room-card__discounted-price
+      span.room-card__total-rub  ₽
+    button.button.button_long Забронировать
