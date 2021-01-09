@@ -1,0 +1,12 @@
+mixin text-field(type,label,status,placeholder)
+  div.text-field
+    if heading
+      div.text-field__label-container
+        div.text-field__status=status
+        label.text-field__label(for='text field')=label
+    if masked
+      input.text-field__input.text-field__input_masked(type=type, id='text field' placeholder=placeholder)
+    else if subscription
+      input.text-field__input.text-field__input_subscription(type=type, id='text field' placeholder=placeholder)
+    else
+      input.text-field__input(type=type, id='text field' placeholder=placeholder)

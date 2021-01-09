@@ -1,0 +1,74 @@
+@import '../../../fonts/fonts-templates.scss';
+.text-field{
+  box-sizing: border-box;
+  max-width: 320px;
+}
+.text-field__label-container{
+  max-width: 320px;
+  padding-bottom:2px;
+  width: calc( 320px * 0.8 + (320 - 320*0.8) * (100vw - 320px) / (1440 - 320) );
+  padding-bottom: 3px;
+}
+.text-field__input{
+  box-sizing: border-box;
+  max-width: 320px;
+  max-height: 44px;
+  width: calc( 320px * 0.8 + (320 - 320*0.8) * (100vw - 320px) / (1440 - 320) );
+  height: calc( 44px * 0.8 + (44 - 44 * 0.8) * (100vw - 320px) / (1440 - 320) );
+  background: #FFFFFF;
+  border: 1px  solid rgba(31, 32, 65, 0.25);
+  border-radius: 4px;
+  @extend %text-Body;
+  color: rgba(31, 32, 65, 0.75);
+  padding-left:15px;
+  outline: none;
+}
+.text-field__input::-webkit-input-placeholder{
+  color: rgba(31, 32, 65, 0.25);
+}
+.text-field__input:hover{
+  border: 1px solid rgba(31, 32, 65, 0.5);
+  color: rgba(31, 32, 65, 0.75);
+}
+.text-field__input:hover::-webkit-input-placeholder{
+  color: rgba(31, 32, 65, 0.75);
+}
+.text-field__input:focus{
+  border: 1px solid rgba(31, 32, 65, 0.5);
+  color: rgba(31, 32, 65, 0.75);
+}
+.text-field__input:focus::-webkit-input-placeholder{
+  color: rgba(31, 32, 65, 0.75);
+}
+.text-field__label {
+  color: #1F2041;
+  @extend %text-H3;
+  
+}
+.text-field__status {
+  color: rgba(31, 32, 65, 0.5);
+  @extend %text-Body;
+  font-size: 12px;
+  line-height:15px;
+  text-transform: uppercase;
+  float: right;
+  
+}
+
+@media screen and (max-width: 1440px) {
+  .text-field__status {
+    font-size:  calc( 11px + (12 - 11) * (100vw - 320px) / (1440 - 320) );
+    line-height: calc( 12px + (15 - 12) * (100vw - 320px) / (1440 - 320) );
+
+  }
+  .text-field__input_subscription{
+    width:calc( 267px * 0.8 + (267 - 267 * 0.8) * (100vw - 320px) / (1440 - 320) );
+  }
+}
+.text-field__input_subscription{
+  box-sizing: border-box;
+  max-width: 267px;
+  padding-right: 35px;
+  background: url(arrow-forward.svg) no-repeat right 11px center ;
+  
+}
