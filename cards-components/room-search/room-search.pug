@@ -1,0 +1,10 @@
+mixin room-search
+  .room-search
+    h1.room-search__head Найдём номера под ваши пожелания
+    .room-search__dates
+      include ../../components/date-dropdown/date-dropdown.pug
+      +date-dropdown('прибытие','','выезд','')
+    .room-search__guests-container
+      include ../../components/dropdown/guests-dropdown/guests-dropdown.pug
+      +guests-dropdown('гости',false,'',0,0,0)
+    button.button.button_long подобрать номер
