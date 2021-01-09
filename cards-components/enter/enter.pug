@@ -1,0 +1,13 @@
+mixin enter
+  .enter
+    h1.enter__head Войти
+    include ../../components/mixins/text-field/text-field.pug
+    .enter__text-field
+      +text-field('email','','','Email')
+    .enter__text-field
+      +text-field('password','','','Пароль')
+    .enter__enter-button
+      button.button.button_long войти
+    .enter__registration
+      p.enter__string Нет аккаунта на Toxin?
+      button.button.button_bright-border Создать

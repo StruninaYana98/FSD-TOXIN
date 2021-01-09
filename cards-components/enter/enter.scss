@@ -1,0 +1,43 @@
+@import '../../fonts/fonts-templates.scss';
+.enter{
+    box-sizing: border-box;
+    max-width: 380px;
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    padding-top:23px;
+    padding-right: 29px;
+    padding-left: 29px;
+    padding-bottom: 28px;
+}
+.enter__head{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 26px;
+    font-weight: bold;
+    line-height: 30px;
+    margin-top: 17px;
+    margin-bottom: 18px;
+    color: #1F2041;
+}
+.enter__text-field{
+    margin-bottom:10px;
+}
+.enter__enter-button{
+    margin-top: 22px;
+    margin-bottom: 25px;
+}
+.enter__registration{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    margin-top: 25px;
+   padding-right: 2px;
+}
+.enter__string{
+    width:fit-content;
+    @extend %text-Body;
+    color: #000000;
+}
