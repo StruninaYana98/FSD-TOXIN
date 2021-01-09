@@ -1,6 +1,7 @@
+@import '../../fonts/fonts-templates.scss';
 .logo {
-     width: 43px;
-     height: 43px;
+     width: calc-size(43);
+     height: calc-size(43);
      position: relative;
      margin:0;
      border-radius: 50%;
@@ -9,16 +10,11 @@
     
       
     }
-@media screen and (max-width:1440px){
-     .logo{
-          width: calc( 43px*0.8 + (43- 43*0.8) * (100vw - 320px) / (1440 - 320) );
-          height:calc( 43px*0.8 + (43- 43*0.8) * (100vw - 320px) / (1440 - 320) );
-     }
-}
+
 .logo_color{
    
-     width: 35px;
-     height: 35px;
+     width: calc-size(35);
+     height: calc-size(35);
      
      background: white;
      border:none;
@@ -27,51 +23,39 @@
      position:absolute;
      content:'';
      background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-     top:-3px;
-     bottom:-3px;
-     right:-3px;
-     left:-3px;
+     top: calc-size(-3);
+     bottom: calc-size(-3);
+     right:calc-size(-3);
+     left:calc-size(-3);
      z-index: -1;
      border-radius: 50%;
 }
 .logo__left-wing {
      position: absolute;
-    
-     top:15px;
-     left:8px;
+     width: calc-size(15);
+     height: calc-size(15);
+     top:calc-size(15);
+     left:calc-size(9);
   }
 .logo__left-wing_color {
      position: absolute;
     
-     top:12px;
-     left:6px;
+     top:calc-size(12);
+     left:calc-size(6);
   }
   .logo__right-wing{
      
      position: absolute;
-     top:15px;
-     left:22px;
-
+     top:calc-size(15);
+     left:calc-size(22);
+     width: calc-size(12);
+     height: calc-size(8);
     
 }
 .logo__right-wing_color{
      
      position: absolute;
-     top:12px;
-     left:19px;
+     top:calc-size(12);
+     left:calc-size(19);
     
-}
-@media screen and (max-width:1440px){
-     .logo__left-wing {
-       
-          top:calc( 15px*0.8 + (15- 15*0.8) * (100vw - 320px) / (1440 - 320) );
-          left:calc( 8px*0.8 + (8- 8*0.8) * (100vw - 320px) / (1440 - 320) );
-     }
-     .logo__right-wing{
-
-          top:calc( 15px*0.8 + (15- 15*0.8) * (100vw - 320px) / (1440 - 320) );
-          left:calc( 22px*0.8 + (22- 22*0.8) * (100vw - 320px) / (1440 - 320) );
-     
-         
-     }
 }

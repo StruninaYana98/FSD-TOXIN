@@ -24,8 +24,9 @@ html
       .cards__third-column 
         .cards__calendar
           include ../../components/calendar/calendar.pug
-        .cards__room-container
-          include ../../cards-components/room/room.pug
-          +room(888,true,true,"9990",5,"145")
-        .cards__room-container
-          +room("840",false,false,"9990",4,"65")
+        .cards__room-examples
+          .cards__room-container
+            include ../../cards-components/room/room.pug
+            +room(888,true,true,"9990",5,"145")
+          .cards__room-container
+            +room("840",false,false,"9990",4,"65")

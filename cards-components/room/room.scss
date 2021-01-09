@@ -3,14 +3,14 @@
     background: #FFFFFF;
     box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
     border-radius: 5px;
-    max-width: 270px;
-    padding-bottom: 19px;
+    max-width: calc-size(270);
+    padding-bottom: calc-size(19);
 }
 .room__carousel {
     position: relative;
     overflow: hidden;
     max-width: inherit;
-    height: 151px;
+    height: calc-size(151);
     display: block;
   
 }
@@ -24,8 +24,8 @@
 }
 .room__item {
     float: left;
-    width: 270px;
-    height: 151px;
+    width: calc-size(270);
+    height: calc-size(151);
     background-color: rgba(31, 32, 65, 0.1);
 }
 
@@ -41,7 +41,7 @@
     position: relative;
     z-index: 2;
     height: 100%;
-    width: 42px;
+    width: calc-size(42);
     background: url(room__prev.svg) no-repeat center;
     cursor:pointer;
 }
@@ -49,50 +49,50 @@
     position: relative;
     z-index: 2;
     height: 100%;
-    width: 42px;
+    width: calc-size(42);
     background: url(room__next.svg) no-repeat center;
     cursor:pointer;
   }
   .room__pagination{
     position: absolute;
     z-index: 2;
-    bottom: 11px;
-    right: 15px;
+    bottom: calc-size(11);
+    right: calc-size(15);
   }
   .room__page{
     box-sizing:border-box;
    
    display: inline-block;
   
-   width: 7.5px;
-   height: 7.49px;
+   width: calc-size(7.5);
+   height: calc-size(7.49);
    border: 1px solid #FFFFFF;
    border-radius: 50%;
-   margin-left: 4px;
+   margin-left: calc-size(4);
    filter: drop-shadow(0px 5px 5px rgba(31, 32, 65, 0.3));
   }
   .room__page_active{
       background-color: white;
   }
   .room__information{
-    padding-left: 20px;
-    padding-right: 17px;
+    padding-left: calc-size(20);
+    padding-right: calc-size(17);
   }
   .room__number-and-price{
       display:flex;
       justify-content: space-between;
-      margin-top:20px;
-      margin-bottom: 8px;
+      margin-top:calc-size(20);
+      margin-bottom: calc-size(8);
   }
   .room__number-sign{
     @extend %text-H2;
-    font-size:15px;
+    font-size:calc-size(15);
   
 }
 .room__number{
     @extend %text-H2;
-    margin-left:3px;
-    margin-right: 4px;
+    margin-left:calc-size(3);
+    margin-right: calc-size(4);
   
 }
 .room__lux{
@@ -108,30 +108,30 @@
 .room__rub{
     @extend %text-H3;
     color: rgba(31, 32, 65, 0.5);
-    font-size:14px;
-    line-height: 14px;
+    font-size:calc-size(14);
+    line-height: calc-size(14);
  
    
 }
 .room__rub{
-    margin-right: 5px
+    margin-right: calc-size(5);
 }
 .room__day{
     @extend %text-Body;
     color: rgba(31, 32, 65, 0.5);
-    font-size: 12px;
-    line-height: 15px;
+    font-size: calc-size(12);
+    line-height: calc-size(15);
 }
 .room__rating-and-reviews{
     display:flex;
     justify-content: space-between;
     align-items:center ;
     box-sizing: border-box;
-    padding-top: 7px;
+    padding-top: calc-size(7);
     border-top: 1px solid rgba(31, 32, 65, 0.1); 
 }
 .room__rating{
-    margin-left:2px;
+    margin-left:calc-size(2);
 }
 .room__reviews{
     @extend %text-Body;
@@ -141,6 +141,6 @@
     font-weight: bold;
 }
 .room__reviews-string{
-    margin-left: 3px;
-    margin-right: 4px;
+    margin-left: calc-size(3);
+    margin-right: calc-size(4);
 }

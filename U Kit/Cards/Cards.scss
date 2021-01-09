@@ -1,3 +1,4 @@
+@import '../../fonts/fonts-templates.scss';
 .cards__body{
     background-color:rgba(31, 32, 65, 0.05);
     max-width: 1440px;
@@ -5,29 +6,54 @@
     margin-right: auto;
 }
 .cards__room{
-    margin-left: 50px;
+    margin-left: calc-size(50);
 }
 .cards__logo{
-    margin-left:30px;
-    margin-top:30px;
+    margin-left:calc-size(30);
+    margin-top:calc-size(30);
 }
+
 .cards__components-container{
     display: grid;
     grid-template-columns:  max-content max-content max-content;
-    grid-column-gap: 40px;
+    grid-column-gap:calc-size(40);
     max-width: fit-content;
     margin-left:auto;
     margin-right: auto;
-    margin-top:72px;
-    margin-bottom: 72px;
+    margin-top:calc-size(72);
+    margin-bottom: calc-size(72);
+}
+
+@media screen and (max-width:1440px){
+  
+    .cards__calendar{
+        margin-top: calc-size(40);
+        margin-right: calc-size(40);
+    }
+    .cards__third-column{
+        grid-column: 1/3;
+        display: flex;
+        flex-wrap: wrap;
+        
+    }
+}
+@media screen and (max-width:920px){
+    .cards__components-container{
+    grid-template-columns:  1fr;
+    }
+    .cards__third-column{
+        grid-column: 1/2;
+       display: block;
+    }
 }
 .cards__registration-container{
-    margin-top: 40px;
+    margin-top: calc-size(40);
+    margin-bottom: calc-size(40);
     
 }
 .cards__enter-container{
-    margin-top: 40px;
+    margin-top: calc-size(40);
 }
 .cards__room-container{
-    margin-top: 40px;
+    margin-top: calc-size(40);
 }

@@ -1,32 +1,32 @@
 @import '../../fonts/fonts-templates.scss';
 .room-card{
-    max-width: 380px;
+    width: calc-size(380);;
     background-color: white;
     border: 1px solid rgba(0, 0, 0, 0.12);
     box-sizing: border-box;
     box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
-    border-radius: 4px;
-    padding-top: 40px;
-    padding-left: 29px;
-    padding-right: 29px;
-    padding-bottom: 30px;
+    border-radius: calc-size(4);
+    padding-top: calc-size(40);
+    padding-left: calc-size(29);
+    padding-right: calc-size(29);
+    padding-bottom: calc-size(30);
 }
 .room-card__head{
     display: flex;
     justify-content: space-between;
     align-items:baseline ;
-    margin-bottom: 15px;
+    margin-bottom: calc-size(15);
 }
 .room-card__number-sign,
 .room-card__number{
     @extend %text-H1;
 }
 .room-card__number{
-    margin-left:3px;
-    margin-right: 3px;
+    margin-left:calc-size(3);
+    margin-right: calc-size(3);
 }
 .room-card__number-sign{
-    font-size: 15px;
+    font-size: calc-size(15);
 }
 .room-card__lux{
     @extend %text-H3;
@@ -41,22 +41,22 @@
 
 .room-card__price,
 .room-card__rub-head{
-    font-size: 14px;
+    font-size: calc-size(14);
     font-weight: bold;
    
 }
 .room-card__rub-head{
-    margin-right: 3px;
-    margin-left: 2px;
+    margin-right: calc-size(3);
+    margin-left: calc-size(2);
 }
 .room-card__day{
-    font-size:12px;
+    font-size:calc-size(12);
     font-weight: normal;
     text-transform: lowercase;
 }
 .room-card__guests-dropdown{
-    margin-top: 21px;
-    margin-bottom: 17px;
+    margin-top: calc-size(21);
+    margin-bottom: calc-size(17);
 }
 .room-card__string,
 .room-card__rub{
@@ -67,44 +67,44 @@
 .room-card__string{
     display:flex;
     justify-content: space-between;
-    margin-bottom: 11px;
+    margin-bottom: calc-size(11);
 }
 .room-card__day-price{
     font-weight: normal;
     color: rgba(31, 32, 65, 0.75);
 }
 .room-card__multiplication{
-    margin-left: 5px;
-    margin-right: 3px;
+    margin-left: calc-size(5);
+    margin-right: calc-size(3);
 }
 .room-card__line{
-    line-height: 19px;
+    line-height: calc-size(19);
 }
 .room-card__days{
-    margin-left:3px;
+    margin-left:calc-size(3);
 }
 .room-card__service-charge{
     white-space: nowrap;
-    margin-left: 5px;
+    margin-left:calc-size(5);
     
 }
 .room-card__service-charge,
 .room-card__additional-service
 {
-    line-height: 17px;
+    line-height: calc-size(17);
 }
 .room-card__container{
     display:flex;
     justify-content: space-between;
    
-    width: 239px;
+    width: calc-size(239);
 }
 .room-card__line{
     width:fit-content;
 }
 .room-card__information{
-    width: 20px;
-    height: 20px;
+    width: calc-size(20);
+    height: calc-size(20);;
     border: 1px solid rgba(31, 32, 65, 0.25);
     box-sizing: border-box;
     border-radius: 50%;
@@ -112,23 +112,23 @@
     @extend %text-Body;
     font-weight: bold;
     color: rgba(31, 32, 65, 0.25);
-    line-height: 20px;
+    line-height: calc-size(20);
 }
 .room-card__final-price{
     display: flex;
     @extend %text-H1;
-    font-size: 19px;
-    line-height: 13px;
+    font-size: calc-size(19);
+    line-height: calc-size(13);
     vertical-align: bottom;
-    margin-top: 35px;
-    margin-bottom: 25px;
+    margin-top: calc-size(35);
+    margin-bottom: calc-size(25);
 }
 .room-card__dashed-line{
    width: 100%;
     border-bottom: 1px dotted rgba(31, 32, 65, 0.25);
    box-sizing: border-box;
-   margin-left:3px;
-   margin-right: 3px;
+   margin-left:calc-size(3);
+   margin-right: calc-size(3);
 }
 .room-card__discounted-price{
     white-space: nowrap;
