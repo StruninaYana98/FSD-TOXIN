@@ -1,0 +1,5 @@
+import './logo__left-wing.svg'
+import './logo__right-wing.svg'
+import './logo__left-wing.svg'
+import './logo__bright-left-wing.svg'
+import './logo__bright-right-wing.svg'

@@ -25,7 +25,12 @@ module.exports = {
         filename: '[name].js'
 
     },
-
+    devServer:{
+        port:4200,
+        contentBase: PATHS.build,
+        index: 'Cards.html'
+       
+    },
 
     plugins: [
         new webpack.ProvidePlugin({
@@ -86,8 +91,20 @@ module.exports = {
                 ]
             },
             {
-            test: /\.(woff(2)?|ttf|eot|svg|gif|jpg|png)$/,
-            loader:'file-loader'
+                test: /\.(woff(2)?|ttf|eot)$/,
+                loader: 'file-loader',
+                options: {
+                    name: '[name].[ext]',
+                    outputPath: 'fonts'
+                }
+            },
+            {
+                test: /\.(svg|gif|jpg|png)$/,
+                loader: 'file-loader',
+                options: {
+                    name: '[name].[ext]',
+                    outputPath: 'img'
+                }
             }
         
         ]
