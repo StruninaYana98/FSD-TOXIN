@@ -1,0 +1,226 @@
+@import '../../node_modules/air-datepicker/dist/css/datepicker.min.css';
+@import '../../fonts/fonts-templates.scss';
+.calendar{
+    width: 320px;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    background: #FFFFFF;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    box-sizing: border-box;
+    box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+    border-radius: 4px;
+}
+@media screen and (max-width:1440px){
+    .calendar{
+        width: calc( 320px * 0.8 + (320 - 320 * 0.8) * (100vw - 320px) / (1440 - 320) );
+    }
+}
+.datepicker{
+    width: inherit;
+    margin:auto;
+    border:none;
+   
+    color: rgba(31, 32, 65, 0.5);
+}
+
+.datepicker--content{
+    width: 279.39px;
+    margin:auto;
+}
+@media screen and (max-width:1440px){
+    .datepicker--content{
+        width: calc( 279.39px * 0.8 + (279.39 - 279.39 * 0.8) * (100vw - 320px) / (1440 - 320) );
+       
+    }
+}
+.datepicker--nav{
+    border-bottom:none;
+    padding-left: 16px;
+    padding-right: 16px;
+    min-height: 54px;
+
+}
+@media screen and (max-width:1440px){
+    .datepicker--nav{
+        border-bottom:none;
+        padding-left: calc( 16px * 0.8 + (16 - 16 * 0.8) * (100vw - 320px) / (1440 - 320) );
+        padding-right: calc( 16px * 0.8 + (16 - 16 * 0.8) * (100vw - 320px) / (1440 - 320) );
+        min-height: calc( 54px * 0.8 + (54 - 54 * 0.8) * (100vw - 320px) / (1440 - 320) );
+    
+    }
+}
+.datepicker--nav-title h2{
+    color: #1F2041;
+    @extend %text-Body;
+    font-weight: bold;
+    font-size: 18px;
+    margin:0;
+    
+  
+}
+@media screen and (max-width:1440px){
+    .datepicker--nav-title h2{
+        font-size: calc( 18px * 0.8 + (18 - 18 * 0.8) * (100vw - 320px) / (1440 - 320) );
+    }
+}
+.datepicker--nav-title:hover{
+    background-color:transparent;
+}
+.datepicker--nav-title h2 span{
+    @extend %text-H1;
+    color: #1F2041;
+    font-size: 19px;
+}
+.datepicker--nav-action:hover{
+    background-color:transparent;
+}
+.calendar__arrow-back{
+    width: 23.93px;
+    height: 24px;
+    background: url('arrow_back.svg') center no-repeat;
+}
+.calendar__arrow-forward{
+    width: 23.93px;
+    height: 24px;
+    background: url('arrow_forward.svg')center no-repeat;
+}
+.datepicker--days-names{
+    margin-top: 6px;
+    margin-bottom:0px;
+}
+@media screen and (max-width:1440px){
+    .datepicker--days-names{
+    margin-top:calc( 6px * 0.8 + (6 - 6 * 0.8) * (100vw - 320px) / (1440 - 320) );
+    }
+
+}
+
+
+.datepicker--day-name{
+    color: #BC9CFF;
+    @extend %text-Body;
+    font-weight: bold;
+    text-transform: none;
+    width: 39.88px;
+    height: 40px;
+    font-size: 12px;
+}
+
+.datepicker--cells-days{
+    padding:auto;
+}
+.datepicker--cell-day{
+    width: 39.88px;
+    height: 40px; 
+    color: rgba(31, 32, 65, 0.5);
+    @extend %text-Body;
+}
+@media screen and (max-width:1440px){
+    .datepicker--cell-day{
+       
+        width: calc( 39.88px * 0.8 + (39.88 - 39.88 * 0.8) * (100vw - 320px) / (1440 - 320) );
+        height: calc( 40px * 0.8 + (40 - 40 * 0.8) * (100vw - 320px) / (1440 - 320) );
+       
+    }
+
+}
+.datepicker--cell-day.-other-month-{
+    color: rgba(31, 32, 65, 0.25);
+}
+.datepicker--cell-day.-current-{
+    
+    background: none;
+    color: rgba(31, 32, 65, 0.5);
+  
+}
+.datepicker--cell-day.-other-month-.-current-{
+    color: rgba(31, 32, 65, 0.25);
+}
+.calendar__start-day{
+    
+    background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+    border-radius:50%;
+    color: #FFFFFF;
+    @extend %text-Body;
+    font-weight: bold;
+}
+.datepicker--cell.-selected-,
+.datepicker--cell.-selected-.-focus-,
+.datepicker--cell.-focus-,
+.-selected-.datepicker--cell-day.-other-month-
+{
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    border-radius:50%;
+    font-weight: bold;
+    color: white;
+}
+
+.datepicker--cell.-range-to-, 
+.datepicker--cell.-range-from- {
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    border-radius: 50%;
+    border:none;
+}
+
+.datepicker--cell.-range-from-::before{
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top:0;
+    bottom:0;
+    right: 0;
+    left:50%;
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    opacity: 0.25;
+}
+.datepicker--cell.-focus-.-range-from-::before{
+    background:none;
+}
+.datepicker--cell.-range-to-::before{
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top:0;
+    bottom:0;
+    right: 50%;
+    left:0;
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    opacity: 0.25;
+}
+.datepicker--cell.-in-range-,
+.-in-range-.datepicker--cell-day.-other-month-{
+    background:none;
+    color: rgba(31, 32, 65, 0.5);
+   
+}
+.datepicker--cell.-in-range-:hover{
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    
+}
+.datepicker--cell.-in-range-::before{
+    content: "";
+    position: absolute;
+    top:0;
+    bottom:0;
+    right: 0;
+    left: 0;
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    opacity: 0.25;
+}
+.calendar__buttons{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16px;
+    margin-bottom: 18px;
+    padding-left: 14px;
+    padding-right: 14px;
+}
+@media screen and (max-width:1440px){
+    .calendar__buttons{
+        
+        margin-top: calc( 16px * 0.8 + (16 - 16 * 0.8) * (100vw - 320px) / (1440 - 320) );
+        margin-bottom: calc( 18px * 0.8 + (18 - 18 * 0.8) * (100vw - 320px) / (1440 - 320) );
+        padding-left: calc( 14px * 0.8 + (14 - 14 * 0.8) * (100vw - 320px) / (1440 - 320) );
+        padding-right: calc( 14px * 0.8 + (14 - 14 * 0.8) * (100vw - 320px) / (1440 - 320) );
+    }
+
+}
