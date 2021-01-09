@@ -1,0 +1,17 @@
+mixin room-dropdown(head,expanded,status,num_1,num_2,num_3)
+  .room-dropdown
+    include ../option/option.pug
+    if expanded
+      .room-dropdown__buffer.room-dropdown__buffer_expanded
+    else
+      .room-dropdown__buffer
+    .room-dropdown__head
+      h3.room-dropdown__header=head
+      p.room-dropdown__status=status
+    .room-dropdown__result
+      input.room-dropdown__input(type="text",  disabled)
+      button.room-dropdown__button
+    .room-dropdown__menu
+      +option('спальни',num_1,'bedroom')
+      +option('кровати',num_2,'bed')
+      +option('ванные комнаты',num_3,'shower')

@@ -1,0 +1,25 @@
+mixin guests-dropdown(head,expanded,status, num_1,num_2,num_3)
+  .guests-dropdown
+    include ../option/option.pug
+    if expanded
+      .guests-dropdown__buffer.guests-dropdown__buffer_expanded
+    else
+      .guests-dropdown__buffer
+    .guests-dropdown__head
+      h3.guests-dropdown__header=head
+      p.guests-dropdown__status=status
+    .guests-dropdown__result
+      input.guests-dropdown__input(type="text", value=value disabled)
+      button.guests-dropdown__button
+    .guests-dropdown__menu
+      +option('взрослые',num_1,'adult')
+      +option('дети',num_2,'kid')
+      +option('младенцы',num_3,'baby')
+      if (num_1+num_2+num_3)==0
+        .guests-dropdown__buttons.guests-dropdown__buttons_cleared
+          button.button.button_gray.guests-dropdown__hidden-button очистить
+          button.button.button_bright применить
+      else
+        .guests-dropdown__buttons
+          button.button.button_gray очистить
+          button.button.button_bright применить

@@ -1,0 +1,50 @@
+@import '../../../fonts/fonts-templates.scss';
+.option{
+    display:flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    height: fit-content;
+    margin-bottom: 6px;
+  
+}
+.option__name{
+    @extend %text-H3;
+    margin:0;
+    margin-left: 15px;
+
+}
+.option__switch{
+    display: flex;
+    align-items: center;
+    margin-right: 5px;
+    height: fit-content;
+}
+.option__value{
+    @extend %text-H3;
+    box-sizing: border-box;
+    width: 33px;
+    text-align: center;
+}
+.option__minus,
+.option__plus{
+    @extend %text-Body;
+    cursor: pointer;
+    background: none;
+    font-size: 18px;
+    line-height: 22px;
+    width: 30px;
+    height: 30px;
+    color: rgba(31, 32, 65, 0.5);
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    box-sizing: border-box;
+    border-radius: 50%;
+    padding:0;
+    outline: none;
+
+}
+.option__minus_disabled{
+    cursor:auto;
+    border: 1px solid rgba(31, 32, 65, 0.10);
+    color: rgba(31, 32, 65, 0.10);
+}

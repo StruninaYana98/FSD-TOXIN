@@ -1,0 +1,10 @@
+mixin option(name,value,id)
+  .option
+    h3.option__name=name
+    .option__switch
+      if (value==0)
+        button.option__minus.option__minus_disabled -
+      else
+        button.option__minus -
+      .option__value(id=id)=value
+      button.option__plus +
