@@ -1,0 +1,53 @@
+@import '../../../fonts/fonts-templates.scss';
+
+.rich-checkbox__legend{
+  @extend %text-H3;
+  margin-bottom:9px;
+  
+  margin-bottom: 16px;
+  
+}
+.rich-checkbox__label{
+cursor: pointer;
+position: relative;
+
+@extend %text-Body;
+font-weight: bold;
+line-height: 18px;
+display:flex;
+flex-direction: row-reverse;
+justify-content: flex-end;
+margin-bottom:3px;
+
+}
+.rich-checkbox__input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+
+
+}
+.rich-checkbox__check{
+margin-right: 9px;
+display: inline-block;
+content: "";
+border: 1px solid rgba(31, 32, 65, 0.25);
+width: 20px;
+height: 20px;
+border-radius: 4px;
+}
+.rich-checkbox__input:checked ~ .rich-checkbox__check {
+  border: 1px solid #BC9CFF;
+  background: url(checked.svg) no-repeat center;
+}
+.rich-checkbox__description{
+  margin-bottom:10px;
+}
+.rich-checkbox__string{
+  @extend %text-Body;
+  font-size: 12px;
+    line-height: 14px;
+    margin-left: 30px;
+    color: rgba(31, 32, 65, 0.5);
+}
+

@@ -1,0 +1,18 @@
+mixin expandable-checkbox(legend)
+  form.expandable-checkbox
+    - var items = [['Завтрак','breakfast',false],['Письменный стол','table',true],['Стул для кормления','chair','',true],['Кроватка','bed',true],['Телевизор','TV',false],['Шампунь','shampoo',false],['Телевизор','TV',false],['Шампунь','shampoo',false]]
+    - var item
+    if expanded
+      legend.expandable-checkbox__legend.expandable-checkbox__legend_expanded=legend
+      .expandable-checkbox__checkboxes.expandable-checkbox__checkboxes_expanded
+        each item in items
+          label.expandable-checkbox__label=item[0]
+            input.expandable-checkbox__input(type='checkbox',  name='facilities', value=item[1], checked=item[2])
+            span.expandable-checkbox__check
+    else
+        legend.expandable-checkbox__legend=legend
+        .expandable-checkbox__checkboxes
+          each item in items
+            label.expandable-checkbox__label=item[0]
+              input.expandable-checkbox__input(type='checkbox',  name='facilities', value=item[1], checked=item[2]) 
+              span.expandable-checkbox__check

@@ -1,0 +1,53 @@
+@import '../../../fonts/fonts-templates.scss';
+
+.expandable-checkbox__legend{
+    cursor: pointer;
+    @extend %text-H3;
+    margin-bottom:9px;
+    margin-left:4px;
+    margin:0;
+    padding:0;
+    margin-bottom: 17px;
+    width: 266px;
+    background: url(expand-more.svg) no-repeat right;
+}
+.expandable-checkbox__label{
+    cursor: pointer;
+    position: relative;
+
+    @extend %text-Body;
+    line-height: 18px;
+    display:flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+
+}
+.expandable-checkbox__checkboxes{
+    height: 0;
+    overflow: hidden;
+    transition: 1s ease-in 0s;
+}
+.expandable-checkbox__checkboxes_expanded{
+    height: fit-content;
+}
+.expandable-checkbox__input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+
+
+}
+.expandable-checkbox__check{
+    margin-right: 9px;
+    display: inline-block;
+    content: "";
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+}
+.expandable-checkbox__input:checked + .expandable-checkbox__check {
+    border: 1px solid #BC9CFF;
+    background: url(checked.svg) no-repeat center;
+}

@@ -1,0 +1,12 @@
+mixin rich-checkbox(legend)
+  form.rich-checkbox
+    legend.rich-checkbox__legend=legend
+    - var items = [['Широкий коридор','corridor','Ширина коридоров в номере','не менее 91 см'],['Помощник для инвалидов','assistant','На 1 этаже вас встретит специалист','и проводит до номера.']]
+    -var item
+    each item in items
+      label.rich-checkbox__label=item[0]
+        input.rich-checkbox__input(type='checkbox',  name='rich-checkbox', value=item[1])
+        span.rich-checkbox__check
+      .rich-checkbox__description
+        p.rich-checkbox__string=item[2]
+        p.rich-checkbox__string=item[3]

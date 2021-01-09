@@ -1,0 +1,8 @@
+form.checkbox-buttons
+  legend.checkbox-buttons__legend Checkbox buttons
+  - var items = [['Можно курить','smoke',false],['Можно с питомцами','pets',true],['Можно пригласить гостей (до 10 человек)','guests','false']]
+  - var item
+  each item in items
+    label.checkbox-buttons__label=item[0]
+      input.checkbox-buttons__input(type='checkbox', name='rules', value=item[1], checked=item[2])
+      .checkbox-buttons__check
