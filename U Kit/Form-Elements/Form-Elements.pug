@@ -1,0 +1,123 @@
+doctype html
+html
+  head
+    meta(charset=utf-8)
+    meta(name="viewport" content="width=device-width")
+  body
+    .form-elements__body
+      .form-elements__logo
+        - var colorlogo = false
+        include ../../components/logo/logo.pug
+        +logo
+      .form-elements__first-container
+        .form-elements__first-column
+          include ../../components/mixins/text-field/text-field.pug
+          - var heading = true
+          .form-elements__text-field
+            +text-field('email','Text field ','Default','Email')
+          .form-elements__text-field
+            +text-field('text','Text field ','Hover / Focus','This is pretty awesome')
+          .form-elements__dropdown
+            include ../../components/dropdown/guests-dropdown/guests-dropdown.pug
+            +guests-dropdown('Dropdown',false,'',0,0,0)
+          .form-elements__text-field
+            - var masked=true
+            +text-field('text','Masked text field','Default','ДД.ММ.ГГГГ')
+          .form-elements__date-dropdown
+            include ../../components/date-dropdown/date-dropdown.pug
+            +date-dropdown('date dropdown','','date dropdown','19.08.2019')
+            +date-dropdown('date dropdown','','date dropdown','')
+          .form-elements__filter-date-dropdown
+            include ../../components/filter-date-dropdown/filter-date-dropdown.pug
+            +filter-date-dropdown('filter date dropdown')
+            +filter-date-dropdown('filter date dropdown')
+          - var subscription = true
+          - var masked=false
+          +text-field('email','Subscription text field','','Email')
+        .form-elements__second-column
+          .form-elements__checkbox-buttons
+            include   ../../components/checkbox/checkbox-buttons/checkbox-buttons.pug
+          .form-elements__radio-buttons
+            include ../../components/radio-buttons/radio-buttons.pug
+            +radio-buttons
+          .form-elements__toggle
+            h3.form-elements__head toggle
+            include ../../components/toggle/toggle.pug
+            .form-elements__toggle-element
+              +toggle(true, 'Получать спецпредложения')
+            .form-elements__toggle-element
+              +toggle(false, 'Получать спецпредложения')
+          .form-elements__like-buttons
+            h3.form-elements__head like button
+            include ../../components/like-buttons/like-buttons.pug
+            +like-buttons(2,false)
+            +like-buttons(12,true)
+          .form-elements__rate-buttons
+            h3.form-elements__head rate button
+            include ../../components/rate-buttons/rate-buttons.pug
+            .form-elements__rate-buttons-container
+              +rate-buttons(4)
+              +rate-buttons(5)
+        .form-elements__third-column
+          .form-elements__range-slider
+            include ../../components/range-slider/range-slider.pug
+            +range-slider('Range slider')
+          h3.form-elements__head buttons
+          .form-elements__button-row
+            .form-elements__button
+              button.button.button_bright-fill  click me
+            .form-elements__button
+              button.button.button_faint-fill click me
+          .form-elements__button-row
+            .form-elements__button
+              button.button.button_bright-border click me
+            .form-elements__button
+              button.button.button_faint-border click me
+          .form-elements__button-row
+            .form-elements__button
+              button.button.button_bright click me
+            .form-elements__button
+              button.button.button_gray click me
+          button.button.button_long перейти к оплате 
+          .form-elements__pagination
+            h3.form-elements__head pagination
+            include ../../components/pagination/pagination.pug
+      .form-elements__second-container
+        .form-elements__first-column
+          .form-elements__dropdown-container-1
+       
+        .form-elements__second-column
+          .form-elements__dropdown-container-2
+     
+        .form-elements__third-column
+ 
+      .form-elements__third-container
+        .form-elements__first-column
+          include ../../components/checkbox/expandable-checkbox/expandable-checkbox.pug
+          -var expanded=false
+          +expandable-checkbox('Expandable checkbox list')
+          -var expanded=true
+          +expandable-checkbox('Expandable checkbox list')
+        .form-elements__second-column
+          include ../../components/checkbox/rich-checkbox/rich-checkbox.pug
+          +rich-checkbox('rich checkbox buttons')
+        .form-elements__third-column
+          include ../../components/bullet-list/bullet-list.pug
+          +bullet-list
+      .form-elements__fourth-container
+        .form-elements__first-column
+          include ../../components/room-details/room-details.pug
+          -var line=true
+          +room-details('comfort','Комфорт','Шумопоглощающие стены')
+          +room-details('conveniense','Удобство','Окно в каждой из спален')
+        .form-elements__second-column
+          include ../../components/comments/comments.pug
+          +comments('murad_sarafanov','Мурад Сарафанов','5 дней назад',12,true,'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.')
+      include ../../components/dropdown/room-dropdown/room-dropdown.pug
+      +room-dropdown('Удобства номера',false,'',2,0,0)
+      +room-dropdown('Удобства номера',false,'',2,5,0)
+      +room-dropdown('Удобства номера',false,'',3,3,0)
+      include ../../components/dropdown/guests-dropdown/guests-dropdown.pug
+      +guests-dropdown('количество гостей',true,'expanded',0,0,0)
+      +guests-dropdown('количество гостей',true,'expanded',2,5,1)
+      +guests-dropdown('количество гостей',false,'expanded',1,0,0)
