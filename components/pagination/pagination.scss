@@ -1,0 +1,97 @@
+@import '../../fonts/fonts-templates.scss';
+.pagination{
+    width: fit-content;
+}
+.pagination__nav .disabled{
+    width: fit-content;
+}
+.pagination__nav .current.prev,
+.pagination__nav .current.next{
+   display: none;
+}
+.pagination__nav ul{
+    display: flex;
+    padding:0;
+    margin:0;
+}
+.pagination__nav li{
+   
+    border-radius: 50%;
+    list-style: none;
+    text-align: center;
+    @extend %text-Body;
+    font-size: 12px;
+}
+
+.pagination__nav span{
+    display: block;
+    width:40px;
+    line-height: 40px;
+    color: #FFFFFF;
+    font-weight: bold;
+    
+}
+@media screen and (max-width:1440px){
+    .pagination__nav span{
+    width: calc( 40px * 0.8 + (40 - 40 * 0.8) * (100vw - 320px) / (1440 - 320) );
+    line-height: calc( 40px * 0.8 + (40 - 40 * 0.8) * (100vw - 320px) / (1440 - 320) );
+    }
+}
+.pagination__nav .ellipse{
+    color: rgba(31, 32, 65, 0.5);
+    font-weight: normal;
+}
+.pagination__nav a{
+    display: block;
+    width:40px;
+    line-height: 40px;
+    text-decoration: none;
+    color: rgba(31, 32, 65, 0.5);
+}
+@media screen and (max-width:1440px){
+    .pagination__nav a{
+    width: calc( 40px * 0.8 + (40 - 40 * 0.8) * (100vw - 320px) / (1440 - 320) );
+    line-height: calc( 40px * 0.8 + (40 - 40 * 0.8) * (100vw - 320px) / (1440 - 320) );
+    }
+}
+.pagination__nav .active{
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    
+}
+
+.pagination__nav .next,
+.pagination__nav .prev{
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%); 
+}
+@media screen and (max-width:1440px){
+    .pagination__nav .next,
+    .pagination__nav .prev{
+    width: calc( 40px * 0.8 + (40 - 40 * 0.8) * (100vw - 320px) / (1440 - 320) );
+    height: calc( 40px * 0.8 + (40 - 40 * 0.8) * (100vw - 320px) / (1440 - 320) );
+    }
+}
+.pagination__nav .next:after,
+.pagination__nav .prev:after{
+    position: absolute;
+    top:0;
+    bottom:0;
+    right: 0;
+    left: 0;
+    content: '';
+    background: url(pagination__arrow.svg) no-repeat center;
+}
+.pagination__nav .prev:after{
+    transform: rotate(180deg);
+}
+.pagination__bottom {
+    width: fit-content;
+    @extend %text-Body;
+    color: rgba(31, 32, 65, 0.75);
+    padding:0;
+    margin: auto;
+    margin-top:10px;
+}
