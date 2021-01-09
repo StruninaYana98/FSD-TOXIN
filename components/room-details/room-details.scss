@@ -1,0 +1,45 @@
+@import '../../fonts/fonts-templates.scss';
+.room-details{
+  box-sizing: border-box;
+  max-width: 280px;
+ 
+}
+
+.room-details__img{
+    display: inline-block;
+    max-width: 40px;
+    max-height: 40px;
+   
+}
+@media screen and (max-width:1440px){
+    .room-details__img{
+        max-width: calc( 40px * 0.8 + (40 - 40*0.8) * (100vw - 320px) / (1440 - 320) );
+        max-height: calc( 40px * 0.8 + (40 - 40*0.8) * (100vw - 320px) / (1440 - 320) );
+        
+    }
+    .room-details{
+        width:calc( 280px * 0.8 + (280 - 280*0.8) * (100vw - 320px) / (1440 - 320) );
+    }
+}
+.room-details__text-container{
+    display:inline-block;
+    margin-left: 10px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+.room-details__detail{
+    @extend %text-Body;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom:0;
+}
+.room-details__description{
+    @extend %text-Body;
+    margin:0;
+}
+.room-details__line{
+    max-width: 280px;
+    height: 1px;
+    background: rgba(31, 32, 65, 0.1);
+    
+}

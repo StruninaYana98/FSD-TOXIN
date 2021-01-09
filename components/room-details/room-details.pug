@@ -1,0 +1,8 @@
+mixin room-details(image, detail,description)
+  .room-details 
+    img.room-details__img(src="../components/room-details/"+image + ".svg")
+    .room-details__text-container
+      p.room-details__detail=detail
+      p.room-details__description=description
+    if line
+      div.room-details__line
