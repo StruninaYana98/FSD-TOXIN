@@ -3,6 +3,9 @@
     margin:0;
     padding:0;
 }
+html{
+    background-color: rgba(31, 32, 65, 0.03);
+}
 .landing-page__header{
     position: fixed;
     top:0;
@@ -17,7 +20,7 @@
     margin-right: auto;
 }
 .landing-page__image-container{
-    
+    position: relative;
     max-width: 100%;
     height: calc-size(900);
     display:table-cell; 
@@ -49,7 +52,7 @@
     @extend  %text-Body;
     position: absolute;
     z-index: 1;
-    bottom: calc-size(26);
+    bottom: calc-size(25);
     right: calc-size(134);
     line-height: calc-size(24);
     width: calc-size(297);
@@ -63,4 +66,7 @@
         transform: translate(-50%);
         text-align: center;
     }
+}
+.landing-page__footer{
+    max-width: 1440px;
 }

@@ -11,8 +11,9 @@ html
     .landing-page__body
       .landing-page__image-container
         img.landing-page__image(src="img/landing-page__img.png")
+        p.landing-page__greeting Лучшие номера для вашей работы, отдыха и просто вдохновения
       include ../../cards-components/room-search/room-search.pug  
       .landing-page__room-search 
         +room-search
-      p.landing-page__greeting Лучшие номера для вашей работы, отдыха и просто вдохновения
-    include ../../components/footer/footer.pug
+      
+      include ../../components/footer/footer.pug

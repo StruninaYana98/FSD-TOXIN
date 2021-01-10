@@ -98,8 +98,8 @@
     background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
     color:white;
     border:none;
-    padding-right:calc-size(42);
-    padding-left:calc-size(37);
+    padding-right:calc-size(39);
+    padding-left:calc-size(40);
     padding-top: calc-size(14);
     padding-bottom: calc-size(15);
    
@@ -108,13 +108,9 @@
 .button_long::after{
     position: absolute;
     content:'';
-    background: url(arrow-forward.svg) no-repeat ;
-    background-position: right calc-size(13) top 50%;
-    top:0;
-    left:0;
-    right:0;
-    bottom:0;
-    height: 10px;
-    width: 10px;
+    background: url(buttons__arrow-forward.svg) no-repeat center;
+    right:15px;
+    width: calc-size(18);
+    height: calc-size(18);
    
 }

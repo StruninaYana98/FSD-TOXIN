@@ -3,7 +3,7 @@ import '../../components/header/header.scss';
 import './Landing-page.scss';
 import '../../components/logo/logo.scss'
 import '../../components/buttons/buttons.scss';
-import '../../components/buttons/buttons.js';
+
 import '../../components/header/header.js';
 import './landing-page__img.png';
 import '../../cards-components/room-search/room-search.scss';

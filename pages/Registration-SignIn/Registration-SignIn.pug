@@ -1,0 +1,21 @@
+doctype html
+html
+  head
+    meta(charset=utf-8)
+    meta(name="viewport" content="width=device-width")
+  body.registration-signin
+    include ../../components/header/header.pug
+    -var autorization = false
+    .registration-signin__header
+      +header
+    .registration-signin__body
+      .registration-signin__image-container
+        img.registration-signin__image(src="img/registration-signin__img.png")
+      .registration-signin__registration.registration-signin__registration_active
+        include ../../cards-components/registration/registration.pug
+        +registration
+      .registration-signin__enter 
+        include ../../cards-components/enter/enter.pug
+        +enter
+    .registration-signin__footer
+      include ../../components/footer/footer.pug

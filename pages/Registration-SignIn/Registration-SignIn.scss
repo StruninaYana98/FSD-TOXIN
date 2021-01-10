@@ -1,0 +1,56 @@
+@import '../../fonts/fonts-templates.scss';
+html{
+    background-color: rgba(31, 32, 65, 0.03);
+}
+*{
+    margin:0;
+    padding:0;
+}
+.registration-signin__header{
+    position: fixed;
+    top:0;
+    width: 100vw;
+    z-index: 10;
+}
+.registration-signin__body{
+    position: relative;
+    box-sizing: border-box;
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.registration-signin__image-container{
+    max-width: 100%;
+    height: calc-size(753);
+    display:table-cell; 
+    vertical-align:middle;
+    
+    overflow: hidden;
+}
+.registration-signin__image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.registration-signin__registration,
+.registration-signin__enter {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    transform: translate(-50%);
+    top:calc-size(89);
+}
+.registration-signin__enter {
+    
+    top:calc-size(233);
+}
+.registration-signin__registration_active,
+.registration-signin__enter_active {
+    display: block;
+}
+.registration-signin__footer{
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+}
