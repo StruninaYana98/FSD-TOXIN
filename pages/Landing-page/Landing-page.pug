@@ -1,0 +1,17 @@
+doctype html
+html
+  head
+    meta(charset=utf-8)
+    meta(name="viewport" content="width=device-width")
+  body
+    include ../../components/header/header.pug
+    -var autorization = false
+    .landing-page__header
+      +header
+    .landing-page__body
+      .landing-page__image-container
+        img.landing-page__image(src="img/landing-page__img.png")
+      include ../../cards-components/room-search/room-search.pug  
+      .landing-page__room-search 
+        +room-search
+    include ../../components/footer/footer.pug
