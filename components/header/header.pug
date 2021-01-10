@@ -1,38 +1,37 @@
 mixin header
   header.header
-    div.header__container
-      .header__body
-        .header__logo-toxin
-          include ../logo/logo.pug
-          -var colorlogo=true
-         
-          +logo
-          img.header__toxin(src="img/toxin.svg")
-        
-        nav.header__menu
-          ul.header__list
+    
+    .header__body
+      .header__logo-toxin
+        include ../logo/logo.pug
+        -var colorlogo=true
+       
+        +logo
+        img.header__toxin(src="img/toxin.svg")
+      
+      nav.header__menu
+        ul.header__list
+          li.header__list-item
+            a.header__link.header__link_bold(link="#") О нас
+          li.header__list-item
+            a.header__link.header__link_expanding(link="#") Услуги
+          li.header__list-item
+            a.header__link(link="#") Вакансии
+          li.header__list-item
+            a.header__link(link="#") Новости
+          li.header__list-item
+            a.header__link.header__link_expanding(link="#") Соглашения
+          if autorization
             li.header__list-item
-              a.header__link.header__link_bold(link="#") О нас
+              div.header__line
+                a.header__link(link="#")  Юлий Цезарь
+          else
             li.header__list-item
-              a.header__link.header__link_expand-more(link="#") Услуги
+              button.button.button_small-bright-border Войти
             li.header__list-item
-              a.header__link(link="#") Вакансии
-            li.header__list-item
-              a.header__link(link="#") Новости
-            li.header__list-item
-              a.header__link.header__link_expand-more(link="#") Соглашения
-            if autorization
-              li.header__list-item
-                div.header__line
-                  a.header__link(link="#")  Юлий Цезарь
-            else
-              
-              li.header__list-item
-                button.button.button_small-bright-border Войти
-              li.header__list-item
-                button.button.button_small-bright-fill Зарегистрироваться
-        .header__burger
-          span
+              button.button.button_small-bright-fill Зарегистрироваться
+      .header__burger
+        span.header__middle-burger-line
  
 
 

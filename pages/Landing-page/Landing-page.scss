@@ -1,4 +1,8 @@
 @import '../../fonts/fonts-templates.scss';
+*{
+    margin:0;
+    padding:0;
+}
 .landing-page__header{
     position: fixed;
     top:0;
@@ -6,6 +10,7 @@
     z-index: 10;
 }
 .landing-page__body{
+    position: relative;
     box-sizing: border-box;
     max-width: 1440px;
     margin-left: auto;
@@ -14,12 +19,13 @@
 .landing-page__image-container{
     
     max-width: 100%;
-    min-height: 800px;
+    height: calc-size(900);
     display:table-cell; 
     vertical-align:middle;
-    //text-align:center;
+    
     overflow: hidden;
 }
+
 .landing-page__image{
    width: 100%;
    height: 100%;
@@ -28,6 +34,33 @@
 .landing-page__room-search {
     position: absolute;
     z-index: 1;
+    width:fit-content;
     top:calc-size(140);
     margin-left: calc-size(140);
+}
+@media screen and (max-width:1220px){
+    .landing-page__room-search {
+        left: 50%;
+        transform: translate(-50%);
+        margin-left: 0;
+    }
+}
+.landing-page__greeting{
+    @extend  %text-Body;
+    position: absolute;
+    z-index: 1;
+    bottom: calc-size(26);
+    right: calc-size(134);
+    line-height: calc-size(24);
+    width: calc-size(297);
+    height: calc-size(48);
+    text-align: right;
+}
+@media screen and (max-width:1220px){
+    .landing-page__greeting {
+        right: 0;
+        left:50%;
+        transform: translate(-50%);
+        text-align: center;
+    }
 }
