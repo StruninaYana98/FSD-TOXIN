@@ -24,8 +24,12 @@
     margin-bottom: calc-size(72);
 }
 
-@media screen and (max-width:1440px){
-  
+@media screen and (max-width:1220px){
+    .cards__components-container{
+       
+        grid-template-columns:  max-content max-content ;
+        
+    }
     .cards__calendar{
         margin-top: calc-size(40);
         margin-right: calc-size(40);
@@ -37,7 +41,7 @@
         
     }
 }
-@media screen and (max-width:920px){
+@media screen and (max-width:800px){
     .cards__components-container{
     grid-template-columns:  1fr;
     }
