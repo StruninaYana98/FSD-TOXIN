@@ -20,12 +20,12 @@ import '../../components/radio-buttons/radio-buttons.scss'
 
 $(document).ready(function () {
     $("button[name*='registration-button'").on("click", function () {
-        $(this).parents('.registration-signin').find('.registration-signin__registration').toggleClass("registration-signin__registration_active");
+        $(this).parents('.registration-signin').find('.registration-signin__registration').addClass("registration-signin__registration_active");
         $(this).parents('.registration-signin').find('.registration-signin__enter ').removeClass("registration-signin__enter_active");
 
     });
     $("button[name*='signin-button'").on("click", function () {
-        $(this).parents('.registration-signin').find('.registration-signin__enter').toggleClass("registration-signin__enter_active");
+        $(this).parents('.registration-signin').find('.registration-signin__enter').addClass("registration-signin__enter_active");
         $(this).parents('.registration-signin').find('.registration-signin__registration').removeClass("registration-signin__registration_active");
     });
 });

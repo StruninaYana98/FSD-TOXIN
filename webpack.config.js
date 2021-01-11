@@ -12,6 +12,7 @@ const PATHS = {
     cards: path.join(__dirname, '/U Kit/Cards'),
     landingpage: path.join(__dirname, '/pages/Landing-page'),
     registrationsignin:path.join(__dirname, '/pages/Registration-SignIn'),
+    searchroom:path.join(__dirname, '/pages/Search-room'),
     build: path.join(__dirname, '/bundles')
 }
 
@@ -22,7 +23,8 @@ module.exports = {
         'headersfooters': PATHS.headersfooters + '/Headers-&-Footers.js',
         'cards': PATHS.cards + '/Cards.js',
         'landingpage': PATHS.landingpage + '/Landing-page.js',
-        'registrationsignin':PATHS.registrationsignin+'/Registration-SignIn.js'
+        'registrationsignin':PATHS.registrationsignin+'/Registration-SignIn.js',
+        'searchroom':PATHS.searchroom+'/Search-room.js'
     },
     output: {
         path: PATHS.build,
@@ -32,7 +34,7 @@ module.exports = {
     devServer: {
         port: 4200,
         contentBase: PATHS.build,
-        index: 'Registration-SignIn.html'
+        index: 'Search-room.html'
 
     },
 
@@ -71,6 +73,11 @@ module.exports = {
             template: PATHS.registrationsignin + '/Registration-SignIn.pug',
             filename: 'Registration-SignIn.html',
             chunks: ['registrationsignin']
+        }),
+        new HtmlWebpackPlugin({
+            template: PATHS.searchroom + '/Search-room.pug',
+            filename: 'Search-room.html',
+            chunks: ['searchroom']
         }),
         new MiniCssExtractPlugin({
             filename: '[name].css'

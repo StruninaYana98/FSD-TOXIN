@@ -4,7 +4,7 @@ mixin room(number,lux,scroll,price,rating,reviews)
       ul.room__list
         - for (var n = 1; n <= 4; n++)
           li.room__item(value=n)
-            img.room__image(src="../cards-components/room/room__"+ number + "("+ n + ")" + ".jpg" alt="room image")
+            img.room__image(src="rooms-img/room__"+ number + "_"+ n + ".jpg" alt="room image")
       if scroll
         .room-control
           .room__control-prev

@@ -3,13 +3,13 @@
 @import '../../fonts/fonts-templates.scss';
 .range-slider{
   box-sizing: border-box;
-  max-width: 266px;
+  max-width: calc-size(266);
 }
 .range-slider__container{
   display:flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 22px;
+  margin-bottom: calc-size(22);
 }
 .range-slider__header {
     @extend %text-H3;
@@ -55,34 +55,30 @@
   margin: 0;
 }
 
-
- 
-
 .ui-slider-horizontal{
-    width: 266px;
-    height: 6px;
+    width: calc-size(266);
+    height: calc-size(6);
     border-radius: 3px;
     border: 1px solid rgba(31, 32, 65, 0.25);
-  background: white;
+    background: white;
   }
 .ui-slider-horizontal .ui-slider-range {
-  background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+    background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
    }
 
 .ui-slider .ui-slider-handle {
- width: 12px;
-height: 12px;
-
-  
-  outline:none;
-  background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
-border: 2px solid #FFFFFF;
-border-radius: 10px;
-  cursor: pointer;
-  z-index: 10; }
+    width: calc-size(12);
+    height: calc-size(12);
+    outline:none;
+    background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+    border: 2px solid #FFFFFF;
+    border-radius: calc-size(10);
+    cursor: pointer;
+     z-index: 2; }
 
 
 .price-range-min, .price-range-max {
   
-  display: none; }
+    display: none; 
+  }
 

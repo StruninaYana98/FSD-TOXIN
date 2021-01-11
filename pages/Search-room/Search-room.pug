@@ -1,0 +1,59 @@
+doctype html
+html
+  head
+    meta(charset=utf-8)
+    meta(name="viewport" content="width=device-width")
+  body.search-room
+    include ../../components/header/header.pug
+    -var autorization = false
+    .search-room__header
+      +header
+    .search-room__body
+      .search-room__rooms-filter-container
+        .search-room__filter
+         
+          include ../../components/filter-date-dropdown/filter-date-dropdown.pug
+          +filter-date-dropdown('даты пребывания в отеле')
+          include ../../components/dropdown/guests-dropdown/guests-dropdown.pug
+          +guests-dropdown('гости',false,'',0,0,0)
+          include ../../components/range-slider/range-slider.pug
+          +range-slider('Range slider')
+          include   ../../components/checkbox/checkbox-buttons/checkbox-buttons.pug
+          include ../../components/checkbox/rich-checkbox/rich-checkbox.pug
+          +rich-checkbox('rich checkbox buttons')
+          include ../../components/dropdown/room-dropdown/room-dropdown.pug
+          +room-dropdown('Удобства номера',false,'',2,0,0)
+          include ../../components/checkbox/expandable-checkbox/expandable-checkbox.pug
+          -var expanded=false
+          +expandable-checkbox('Дополнительные удобства')
+          .search-room__filter-toggle
+        .search-room__rooms-container
+          .search-room__rooms
+            include ../../cards-components/room/room.pug
+            .search-room__room
+              +room(888,true,true,"9990",5,"145")
+            .search-room__room
+              +room(840,false,false,"9990",4,"65")
+            .search-room__room
+              +room(980,true,false,"8500",3,"35")
+            .search-room__room
+              +room(856,false,false,"7300",5,"19")
+            .search-room__room
+              +room(740,false,false,"6000",4,"44")
+            .search-room__room
+              +room(982,false,false,"5800",3,"56")
+            .search-room__room
+              +room(678,false,false,"5500",5,"45")
+            .search-room__room
+              +room(450,false,false,"5300",4,"39")
+            .search-room__room
+              +room(350,false,false,"5000",3,"77")
+            .search-room__room
+              +room(666,false,false,"5000",5,"25")
+            .search-room__room
+              +room(444,false,false,"5000",3,"15")
+            .search-room__room
+              +room(352,false,false,"5000",3,"55")
+          .search-room__pagination
+            include ../../components/pagination/pagination.pug
+      include ../../components/footer/footer.pug
