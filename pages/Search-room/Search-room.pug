@@ -11,23 +11,31 @@ html
     .search-room__body
       .search-room__rooms-filter-container
         .search-room__filter
-         
-          include ../../components/filter-date-dropdown/filter-date-dropdown.pug
-          +filter-date-dropdown('даты пребывания в отеле')
-          include ../../components/dropdown/guests-dropdown/guests-dropdown.pug
-          +guests-dropdown('гости',false,'',0,0,0)
-          include ../../components/range-slider/range-slider.pug
-          +range-slider('Range slider')
-          include   ../../components/checkbox/checkbox-buttons/checkbox-buttons.pug
-          include ../../components/checkbox/rich-checkbox/rich-checkbox.pug
-          +rich-checkbox('rich checkbox buttons')
-          include ../../components/dropdown/room-dropdown/room-dropdown.pug
-          +room-dropdown('Удобства номера',false,'',2,0,0)
-          include ../../components/checkbox/expandable-checkbox/expandable-checkbox.pug
-          -var expanded=false
-          +expandable-checkbox('Дополнительные удобства')
+          .search-room__filter-date-dropdown
+            include ../../components/filter-date-dropdown/filter-date-dropdown.pug
+            +filter-date-dropdown('даты пребывания в отеле')
+          .search-room__guests-dropdown
+            include ../../components/dropdown/guests-dropdown/guests-dropdown.pug
+            +guests-dropdown('гости',false,'',3,0,1)
+          .search-room__range-slider
+            include ../../components/range-slider/range-slider.pug
+            +range-slider('диапазон цены')
+            p.search-room__range-slider-description Стоимость за сутки пребывания в номере
+          .search-room__home-rules
+            include   ../../components/checkbox/checkbox-buttons/checkbox-buttons.pug
+          .search-room__availability
+            include ../../components/checkbox/rich-checkbox/rich-checkbox.pug
+            +rich-checkbox('доступность')
+          .search-room__room-amenities
+            include ../../components/dropdown/room-dropdown/room-dropdown.pug
+            +room-dropdown('Удобства номера',false,'',2,2,0)
+          .search-room__additional-amenities
+            include ../../components/checkbox/expandable-checkbox/expandable-checkbox.pug
+            -var expanded=false
+            +expandable-checkbox('Дополнительные удобства')
           .search-room__filter-toggle
         .search-room__rooms-container
+          p.search-room__picked-rooms Номера, которые мы для вас подобрали
           .search-room__rooms
             include ../../cards-components/room/room.pug
             .search-room__room

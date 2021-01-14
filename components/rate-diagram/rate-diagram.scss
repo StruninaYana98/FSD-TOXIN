@@ -1,0 +1,96 @@
+@import '../../fonts/fonts-templates.scss';
+.rate-diagram{
+   width: fit-content;
+   position: relative;
+   display: flex;
+}
+.rate-diagram__title{
+    @extend %text-H2;
+    line-height: 19px;
+    position: absolute;
+    top:0;
+    left:28px;
+  
+    color: #1F2041;
+    width: fit-content;
+    z-index: 1;
+}
+#diagram{
+    width: calc-size(175);
+    height: calc-size(175);
+   
+    position: relative;
+   
+   
+}
+
+.rate-diagram__lable{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+}
+.rate-diagram__lable-text{
+    margin:auto;
+    max-width: calc-size(70);
+    margin-top:calc-size(77);
+    text-align: center;
+    color: #BC9CFF;
+ 
+}
+
+ 
+.rate-diagram__total-count{
+    @extend %text-H3;
+    font-weight: bold;
+    font-size: calc-size(24);
+    line-height: calc-size(29);
+    text-align: center;
+    
+
+}
+.rate-diagram__votes{
+    @extend %text-H3;
+    text-align: center;
+    line-height: calc-size(19);
+}
+.rate-diagram__legend{
+position: relative;
+width: calc-size(175);
+height: calc-size(175);
+
+}
+.rate-diagram__list{
+    position: absolute;
+    bottom: calc-size(10);
+    left: calc-size(3);
+}
+.rate-diagram__list-item{
+    @extend %text-Body;
+    position: relative;
+    list-style-type: none;
+    padding-left: calc-size(15);
+}
+.rate-diagram__list-item::after{
+    content:'';
+    width: calc-size(10);
+    height: calc-size(10);
+    border-radius: 50%;
+    
+    position: absolute;
+    left:0;
+    top:calc-size(7);
+    
+}
+.rate-diagram__list-item_great::after{
+    background:linear-gradient(180deg, #FFE39C 0%, #FFBA9C 100%);
+}
+.rate-diagram__list-item_good::after{
+    background:linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+}
+.rate-diagram__list-item_fine::after{
+    background:linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+}
+.rate-diagram__list-item_bad::after{
+    background:linear-gradient(180deg, #919191 0%, #3D4975 100%);
+}

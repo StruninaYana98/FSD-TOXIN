@@ -13,6 +13,7 @@ const PATHS = {
     landingpage: path.join(__dirname, '/pages/Landing-page'),
     registrationsignin:path.join(__dirname, '/pages/Registration-SignIn'),
     searchroom:path.join(__dirname, '/pages/Search-room'),
+    roomdetails:path.join(__dirname, '/pages/Room-details'),
     build: path.join(__dirname, '/bundles')
 }
 
@@ -24,7 +25,8 @@ module.exports = {
         'cards': PATHS.cards + '/Cards.js',
         'landingpage': PATHS.landingpage + '/Landing-page.js',
         'registrationsignin':PATHS.registrationsignin+'/Registration-SignIn.js',
-        'searchroom':PATHS.searchroom+'/Search-room.js'
+        'searchroom':PATHS.searchroom+'/Search-room.js',
+        'roomdetails':PATHS.roomdetails+'/Room-details.js'
     },
     output: {
         path: PATHS.build,
@@ -34,7 +36,7 @@ module.exports = {
     devServer: {
         port: 4200,
         contentBase: PATHS.build,
-        index: 'Search-room.html'
+        index: 'Room-details.html'
 
     },
 
@@ -78,6 +80,11 @@ module.exports = {
             template: PATHS.searchroom + '/Search-room.pug',
             filename: 'Search-room.html',
             chunks: ['searchroom']
+        }),
+        new HtmlWebpackPlugin({
+            template: PATHS.roomdetails + '/Room-details.pug',
+            filename: 'Room-details.html',
+            chunks: ['roomdetails']
         }),
         new MiniCssExtractPlugin({
             filename: '[name].css'

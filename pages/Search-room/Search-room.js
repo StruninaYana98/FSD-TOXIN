@@ -44,6 +44,7 @@ import '../../components/pagination/pagination.js'
 import '../../components/pagination/pagination.scss'
 
 
+
 $(document).ready(function () {
     $(".search-room__filter-toggle").on("click", function () {
         $(this).parents('.search-room__filter').toggleClass("search-room__filter_opened");

@@ -50,12 +50,13 @@ html{
     min-height: 100%;
     max-width: calc-size(326);
     box-sizing: border-box;
+    padding-right: calc-size(52);
     
 }
 @media screen and (max-width:1220px){
    
     .search-room__filter{
-         max-width: calc-size(426);
+         max-width: calc-size(430);
          position: fixed;
          padding-right: calc-size(20);
          margin: 0;     
@@ -71,7 +72,7 @@ html{
     .search-room__filter_opened{
         left:0;
         transition: all 0.3s;
-        padding-right: calc-size(20);
+        padding-right: calc-size(60);
         padding-left: calc-size(50);
        
         height: 100vh;
@@ -113,11 +114,44 @@ html{
         transition: all 0.3s;
     }
 }
+.search-room__filter-date-dropdown{
+    position: relative;
+    z-index: 7;
+}
+.search-room__guests-dropdown{
+    max-width: calc-size(266);
+    margin-top:19px;
+    
+}
+.search-room__range-slider{
+    margin-top:31px;
+}
+.search-room__range-slider-description{
+    @extend %text-Body;
+    font-size: 12px;
+    line-height: 14px;
+    color: rgba(31, 32, 65, 0.5);
+    margin-top:12px;
+}
+.search-room__home-rules{
+    margin-top:31px;
+}
+.search-room__availability{
+    margin-top:31px;
+}
+.search-room__room-amenities{
+    margin-top:28px;
+}
+.search-room__additional-amenities{
+    margin-top:30px;
+}
 .search-room__rooms{
     margin:auto;
+    margin-top:20px;
     width: 100%;
     display:grid;
     grid-template-columns:repeat(auto-fit, minmax(270px, 1fr));
+   
     
 }
 .search-room__room{
@@ -133,10 +167,17 @@ html{
     }
 }
 .search-room__rooms-container{
-width: 100%;
-
+   width: 100%;
+   padding-top:100px;
 }
-
+.search-room__picked-rooms{
+    font-family: 'Open Sans', sans-serif;
+    font-size: calc-size(26);
+    font-weight: bold;
+    line-height: calc-size(30);
+   margin-left: 7px;
+    color: #1F2041;
+}
 .search-room__pagination{
     margin-left: auto;
     margin-right: auto;
