@@ -26,15 +26,15 @@ let chartConfig = {
           {
             text: 'Разочарован',
             values: [0],
-            gradientColors: '#919191 #919191 #3D4975 #3D4975',
-            gradientStops: '0.3 0.1 0.9',
+            gradientColors: '#919191 #3D4975',
+            gradientStops: '0.9',
             fillType: 'linear'
           },
           {
             text: 'Удовлетворительно',
             values: [130/2],
-            gradientColors: '#BC9CFF #BC9CFF #8BA4F9 #8BA4F9',
-            gradientStops: '0.3 0.1 0.9',
+            gradientColors: '#BC9CFF #8BA4F9',
+            gradientStops: '0.87',
             fillType: 'linear'
           },
           {
